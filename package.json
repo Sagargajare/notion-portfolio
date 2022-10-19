@@ -9,9 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.3.6",
+    "@emotion/react": "11",
+    "@emotion/styled": "11",
+    "@notionhq/client": "^2.2.1",
+    "framer-motion": "6",
     "next": "12.3.1",
+    "notion-client": "^6.15.6",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-notion-x": "^6.15.6"
   },
   "devDependencies": {
     "@types/node": "18.11.0",
