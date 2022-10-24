@@ -29,14 +29,14 @@ const IconLinks = [
   },
   {
     name: "Medium",
-    link: "https://github.com/sagargajare/",
+    link: "https://medium.com/@sagargajare",
     icon: <AiFillMediumSquare size="32px" />,
   },
 ];
 const LeftSide = () => {
   return (
     <Flex mb={{ base: "8", md: "0" }} direction={"column"}>
-      <Badge />
+      <Badge emoji="👋">Hello</Badge>
       <Box
         fontFamily={"Raleway"}
         lineHeight="61.05px"
