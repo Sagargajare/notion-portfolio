@@ -6,19 +6,21 @@ type Props = {};
 const CareerCard = () => {
   return (
     <Box
-      w="580px"
-      h="220px"
+    id="career"
+      w={{ base: "95%", md: "580px" }}
+      h="auto"
       p="4"
       borderRadius={"16px"}
       border="1px solid rgba(123, 74, 226, 0.5)"
-      m="12"
+      m={{ md: "12", base: "4" }}
+      mx="auto"
     >
       <Box p="4">
         <Text
           fontFamily={"Raleway"}
           lineHeight="23.48px"
           fontWeight="700"
-          fontSize={{ base: "18px", md: "20px" }}
+          fontSize={{ base: "16px", md: "20px" }}
           color="#FFFFFF"
         >
           Company Name
@@ -80,7 +82,10 @@ const Career = (props: Props) => {
         </Text>
       </Flex>
       <Box my="12">
-        <Flex justifyContent={"space-evenly"}>
+        <Flex
+          direction={{ base: "column", md: "row" }}
+          justifyContent={"space-evenly"}
+        >
           <Box>
             <Text
               fontFamily={"Raleway"}
@@ -88,14 +93,15 @@ const Career = (props: Props) => {
               fontWeight="800"
               fontSize={{ base: "24px", md: "32px" }}
               color="#FFFFFF"
+              my="8"
             >
               Professional area
             </Text>
-            <Box textAlign={"left"}>
+            <Flex flexWrap={"wrap"}>
               {[0, 1, 2, 3, 4, 5].map((key) => {
                 return <CareerCard key={key} />;
               })}
-            </Box>
+            </Flex>
           </Box>
           <Box>
             <Text
@@ -104,14 +110,15 @@ const Career = (props: Props) => {
               fontWeight="800"
               fontSize={{ base: "24px", md: "32px" }}
               color="#FFFFFF"
+              my="8"
             >
               Academic
             </Text>
-            <Box textAlign={"left"}>
+            <Flex flexWrap={"wrap"}>
               {[0, 1, 2, 3, 4, 5].map((key) => {
                 return <CareerCard key={key} />;
               })}
-            </Box>
+            </Flex>
           </Box>
         </Flex>
       </Box>

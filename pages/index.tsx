@@ -21,7 +21,7 @@ const Home = (props: Props) => {
       <Project />
       <Skillset />
       <Career />
-      <Recommendation />
+      {/* <Recommendation /> */}
       <Contact />
       <Footer/>
     </Container>

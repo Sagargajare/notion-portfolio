@@ -1,4 +1,4 @@
-import { Box, Image, SimpleGrid, Text } from "@chakra-ui/react";
+import { Box, Flex, Image, SimpleGrid, Text } from "@chakra-ui/react";
 import React from "react";
 import Badge from "./Badge";
 
@@ -8,6 +8,7 @@ const ProjectCard = (props: ProjectCardProps) => {
   return (
     <Box
       m="3"
+      id="projects"
       borderRadius={"16px"}
       w="288px"
       h="368px"
@@ -65,21 +66,16 @@ const Project = (props: Props) => {
         fontWeight="800"
         fontSize={{ base: "48px", md: "52px" }}
         color="#FFFFFF"
+        mt="8"
       >
         Works and projects
       </Text>
 
-      <SimpleGrid
-        justifyContent={"center"}
-        alignItems={"center"}
-        my="6"
-        py="12"
-        columns={[1, 1, 2, 3, 4]}
-      >
+      <Flex my="6" py="12" flexWrap={"wrap"} justifyContent="center">
         {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((key) => {
           return <ProjectCard key={key} />;
         })}
-      </SimpleGrid>
+      </Flex>
     </Box>
   );
 };

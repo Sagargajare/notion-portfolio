@@ -15,6 +15,7 @@ import {
   useBreakpointValue,
   useDisclosure,
   Container,
+  Divider,
 } from "@chakra-ui/react";
 import {
   HamburgerIcon,
@@ -34,7 +35,7 @@ export default function WithSubnavigation() {
           color={useColorModeValue("gray.600", "white")}
           minH={"60px"}
           py={{ base: 2 }}
-          px={{ base: 4 }}
+          px={{ md: 4, base: 1 }}
           borderStyle={"solid"}
           borderColor={useColorModeValue("gray.200", "gray.900")}
           align={"center"}
@@ -64,16 +65,11 @@ export default function WithSubnavigation() {
             px="3"
             borderRadius={{ base: "0", md: "16px" }}
             flex={{ base: 1 }}
-            justify={{ base: "center", md: "start" }}
+            justify={{ base: "right", md: "start" }}
             justifyContent="space-between"
           >
-            <Text
-              textAlign={useBreakpointValue({ base: "center", md: "left" })}
-              fontFamily={"heading"}
-              fontSize="18px"
-              color={useColorModeValue("gray.800", "white")}
-            >
-              SG
+            <Text fontWeight={"700"} fontFamily={"raleway"} fontSize="22px" color={"#ffffff"}>
+              SagarG
             </Text>
 
             <Flex display={{ base: "none", md: "flex" }} ml={10}>
@@ -183,10 +179,13 @@ const MobileNav = () => {
       bg={useColorModeValue("white", "gray.800")}
       p={4}
       display={{ md: "none" }}
+      textAlign="center"
     >
+      <Divider />
       {NAV_ITEMS.map((navItem) => (
         <MobileNavItem key={navItem.label} {...navItem} />
       ))}
+      <Divider />
     </Stack>
   );
 };
@@ -207,6 +206,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
         }}
       >
         <Text
+          mx="auto"
           fontWeight={600}
           color={useColorModeValue("gray.600", "gray.200")}
         >
@@ -253,41 +253,23 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: "Inspiration",
-    children: [
-      {
-        label: "Explore Design Work",
-        subLabel: "Trending Design to inspire you",
-        href: "#",
-      },
-      {
-        label: "New & Noteworthy",
-        subLabel: "Up-and-coming Designers",
-        href: "#",
-      },
-    ],
+    label: "About Me",
+    href: "#about",
   },
   {
-    label: "Find Work",
-    children: [
-      {
-        label: "Job Board",
-        subLabel: "Find your dream design job",
-        href: "#",
-      },
-      {
-        label: "Freelance Projects",
-        subLabel: "An exclusive list for contract work",
-        href: "#",
-      },
-    ],
+    label: "Projects",
+    href: "#projects",
   },
   {
-    label: "Learn Design",
-    href: "#",
+    label: "Skillset",
+    href: "#skillset",
   },
   {
-    label: "Hire Designers",
-    href: "#",
+    label: "Career",
+    href: "#career",
+  },
+  {
+    label: "Contact",
+    href: "#contact",
   },
 ];

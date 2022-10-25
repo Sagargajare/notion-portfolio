@@ -108,6 +108,7 @@ const RightSide = () => {
 const Index = (props: Props) => {
   return (
     <Flex
+      id="hero"
       direction={{ base: "column", md: "row" }}
       alignItems={"center"}
       justifyContent={"space-evenly"}

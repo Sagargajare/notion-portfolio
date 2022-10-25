@@ -1,4 +1,4 @@
-import { Box, Button, Flex, IconButton, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, IconButton, Link, Text } from "@chakra-ui/react";
 import React from "react";
 import { BsWhatsapp } from "react-icons/bs";
 import { TbBrandTelegram } from "react-icons/tb";
@@ -10,7 +10,7 @@ type Props = {};
 
 const Contact = (props: Props) => {
   return (
-    <Box my="16">
+    <Box id="contact"  my="16">
       <Flex
         w="100%"
         justifyContent={"center"}
@@ -31,11 +31,12 @@ const Contact = (props: Props) => {
         </Text>
         <Box py="12" w="100%" my="8">
           <Flex
+            direction={{ base: "column", md: "row" }}
             justifyContent={"space-around"}
             alignItems="center"
             alignContent="center"
-                      w={{base:"100%",md:"40%"}}
-                      mx="auto"
+            w={{ base: "100%", md: "40%" }}
+            mx="auto"
           >
             <Box>
               <Button
@@ -95,7 +96,10 @@ const Contact = (props: Props) => {
           </Flex>
         </Box>
         <Box>
-          <Button
+          <Link _hover={{
+            underline:"none"
+          }} href="#hero">
+            <Button
             border={"rgba(123, 74, 226, 0.5)"}
             color="rgba(123, 74, 226, 0.5);"
             bg="transparent"
@@ -105,6 +109,8 @@ const Contact = (props: Props) => {
           >
             Back to top{" "}
           </Button>
+          </Link>
+          
         </Box>
       </Flex>
     </Box>

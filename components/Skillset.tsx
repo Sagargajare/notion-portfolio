@@ -99,6 +99,7 @@ const Skillset = (props: Props) => {
       textAlign={"center"}
       mx="auto"
       w={{ base: "100%", md: "90%" }}
+      id="skillset"
     >
       <Flex
         w="100%"
@@ -130,9 +131,18 @@ const Skillset = (props: Props) => {
             Techs I use on a daily basis
           </Text>
 
-          <Flex mt="8" color="rgba(123, 74, 226, 0.5)">
-            {dailySkills.map((icn,key) => {
-              return <Box key={key } mx="4">{icn.Icon}</Box>;
+          <Flex
+            justifyContent={"center"}
+            flexWrap={"wrap"}
+            mt="8"
+            color="rgba(123, 74, 226, 0.5)"
+          >
+            {dailySkills.map((icn, key) => {
+              return (
+                <Box key={key} m="4">
+                  {icn.Icon}
+                </Box>
+              );
             })}
           </Flex>
         </Box>
@@ -146,9 +156,19 @@ const Skillset = (props: Props) => {
           >
             Other techs I've done projects with
           </Text>
-          <Flex mt="8" color="rgba(123, 74, 226, 0.5)">
-            {otherSkills.map((icn,key) => {
-              return <Box key={ key} mx="4">{icn.Icon}</Box>;
+
+          <Flex
+            justifyContent={"center"}
+            flexWrap={"wrap"}
+            mt="8"
+            color="rgba(123, 74, 226, 0.5)"
+          >
+            {otherSkills.map((icn, key) => {
+              return (
+                <Box key={key} m="4">
+                  {icn.Icon}
+                </Box>
+              );
             })}
           </Flex>
         </Box>

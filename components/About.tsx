@@ -6,7 +6,7 @@ type Props = {};
 
 const About = (props: Props) => {
   return (
-    <Box my="6" w="100%" py="24">
+    <Box id="about" my="6" w="100%" py="24">
       <Box>
         <Flex
           direction={{ base: "column", md: "row" }}
