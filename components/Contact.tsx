@@ -5,12 +5,22 @@ import { TbBrandTelegram } from "react-icons/tb";
 import { RiFileCopyLine } from "react-icons/ri";
 import { HiOutlineArrowNarrowUp } from "react-icons/hi";
 import Badge from "./Badge";
+import useCopy from "use-copy";
 
 type Props = {};
 
 const Contact = (props: Props) => {
+  const [copied, copy, setCopied] = useCopy("sggajare360@gmail.com");
+
+  const copyText = () => {
+    copy();
+
+    setTimeout(() => {
+      setCopied(false);
+    }, 3000);
+  };
   return (
-    <Box id="contact"  my="16">
+    <Box id="contact" my="16">
       <Flex
         w="100%"
         justifyContent={"center"}
@@ -27,7 +37,7 @@ const Contact = (props: Props) => {
           color="#FFFFFF"
           mt="4"
         >
-          Let's talk!
+          Let&apos;s talk!
         </Text>
         <Box py="12" w="100%" my="8">
           <Flex
@@ -52,7 +62,9 @@ const Contact = (props: Props) => {
 
             <Flex direction={"column"} textAlign="center">
               <Box mx="auto" py="1">
-                <TbBrandTelegram size="50px" color="rgba(123, 74, 226, 0.5" />
+                <Link href="mailto:sggajare360@gmail.com">
+                  <TbBrandTelegram size="50px" color="rgba(123, 74, 226, 0.5" />
+                </Link>
               </Box>
 
               <Box py="1">
@@ -79,38 +91,46 @@ const Contact = (props: Props) => {
                 </Text>
               </Box>
               <Box py="1">
-                <IconButton
-                  color={"rgba(123, 74, 226, 0.5"}
+                <Button
                   bg="transparent"
-                  _hover={{ bg: "transparent" }}
-                  icon={
+                  color="rgba(255, 255, 255, 0.5);"
+                  leftIcon={
                     <RiFileCopyLine
                       color="rgba(123, 74, 226, 0.5"
                       size="25px"
                     />
                   }
+                  _hover={{ bg: "transparent" }}
                   aria-label={"Copy"}
-                ></IconButton>
+                >
+                  {copied ? (
+                    "Email Copied"
+                  ) : (
+                    <a onClick={copyText}>Copy Email</a>
+                  )}
+                </Button>
               </Box>
             </Flex>
           </Flex>
         </Box>
         <Box>
-          <Link _hover={{
-            underline:"none"
-          }} href="#hero">
-            <Button
-            border={"rgba(123, 74, 226, 0.5)"}
-            color="rgba(123, 74, 226, 0.5);"
-            bg="transparent"
-            _hover={{ border: "1px solid rgba(123, 74, 226, 0.5)" }}
-            variant={"outline"}
-            rightIcon={<HiOutlineArrowNarrowUp />}
+          <Link
+            _hover={{
+              underline: "none",
+            }}
+            href="#hero"
           >
-            Back to top{" "}
-          </Button>
+            <Button
+              border={"rgba(123, 74, 226, 0.5)"}
+              color="rgba(123, 74, 226, 0.5);"
+              bg="transparent"
+              _hover={{ border: "1px solid rgba(123, 74, 226, 0.5)" }}
+              variant={"outline"}
+              rightIcon={<HiOutlineArrowNarrowUp />}
+            >
+              Back to top{" "}
+            </Button>
           </Link>
-          
         </Box>
       </Flex>
     </Box>

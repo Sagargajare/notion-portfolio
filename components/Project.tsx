@@ -51,7 +51,7 @@ const ProjectCard = (props: ProjectCardProps) => {
         })}
       </Box>
       <Box py="4">
-        <Image src="/img/project.svg" />
+        <Image alt="project" src="/img/project.svg" />
       </Box>
     </Box>
   );

@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, Text } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 import React from "react";
 import Badge from "./Badge";
 
@@ -6,13 +6,13 @@ type Props = {};
 const CareerCard = () => {
   return (
     <Box
-    id="career"
+      id="career"
       w={{ base: "95%", md: "580px" }}
       h="auto"
       p="4"
       borderRadius={"16px"}
       border="1px solid rgba(123, 74, 226, 0.5)"
-      m={{ md: "12", base: "4" }}
+      m={{ md: "8", base: "4" }}
       mx="auto"
     >
       <Box p="4">

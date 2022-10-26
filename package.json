@@ -20,7 +20,8 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.6.0",
-    "react-notion-x": "^6.15.6"
+    "react-notion-x": "^6.15.6",
+    "use-copy": "^0.0.2"
   },
   "devDependencies": {
     "@types/node": "18.11.0",

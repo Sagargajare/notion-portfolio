@@ -154,7 +154,7 @@ const Skillset = (props: Props) => {
             fontSize={{ base: "18px", md: "24px" }}
             color="rgba(255, 255, 255, 0.5);"
           >
-            Other techs I've done projects with
+            Other techs I&apos;ve done projects with
           </Text>
 
           <Flex

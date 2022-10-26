@@ -25,9 +25,9 @@ const IconLinks = [
 ];
 const Footer = (props: Props) => {
   return (
-    <Box p="2" bg="rgba(123, 74, 226, 0.1)" h="50px" borderRadius={"10px"}>
-      <Flex justifyContent={"space-between"}>
-        <Flex>
+    <Box p="2" bg="rgba(123, 74, 226, 0.1)"  borderRadius={"10px"}>
+      <Flex alignItems={"center"} alignContent="center" justifyContent={"space-between"}>
+        <Flex direction={{base:"column",md:"row"}}>
           <Box p="2" mx="2">
             <Text color="#4B3587" as="span">
               Designed by{" "}

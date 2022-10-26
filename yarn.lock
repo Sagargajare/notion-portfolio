@@ -1620,7 +1620,7 @@ copy-to-clipboard@3.3.1:
   dependencies:
     toggle-selection "^1.0.6"
 
-copy-to-clipboard@^3.3.1:
+copy-to-clipboard@^3.2.0, copy-to-clipboard@^3.3.1:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/copy-to-clipboard/-/copy-to-clipboard-3.3.2.tgz#5b263ec2366224b100181dded7ce0579b340c107"
   integrity sha512-Vme1Z6RUDzrb6xAI7EZlVZ5uvOk2F//GaxKUxajDqm9LhOVM1inxNAD2vy+UZDYsd0uyA9s7b3/FVZPSxqrCfg==
@@ -3781,6 +3781,13 @@ use-callback-ref@^1.3.0:
   integrity sha512-3FT9PRuRdbB9HfXhEq35u4oZkvpJ5kuYbpqhCfmiZyReuRgpnhDlbr2ZEnnuS0RrJAPn6l23xjFg9kpDM+Ms7w==
   dependencies:
     tslib "^2.0.0"
+
+use-copy@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/use-copy/-/use-copy-0.0.2.tgz#f465fb9b739dfda070ba79d370dc513ca626cd1b"
+  integrity sha512-Vft5XzLq34FNSovAIVPkfo9BgzKyw4nI+eEO9mWfGNwi/30P7ZBrnHCLpKTcsdS2nyVqN7gOdwiZpvhsWG+6Og==
+  dependencies:
+    copy-to-clipboard "^3.2.0"
 
 use-sidecar@^1.1.2:
   version "1.1.2"

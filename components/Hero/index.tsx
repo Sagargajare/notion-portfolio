@@ -58,7 +58,7 @@ const LeftSide = () => {
       </Text>
       <HStack my="8" gap={6}>
         {IconLinks.map((link, key) => {
-          return <Box key={key}>{link.icon}</Box>;
+          return <Box key={key}>{link.icon}</Box>;     
         })}
       </HStack>
     </Flex>
