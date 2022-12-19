@@ -1,31 +1,26 @@
-import { Box,Container,Text } from '@chakra-ui/react'
-import React from 'react'
-import About from '../components/About';
-import Career from '../components/Career';
-import Contact from '../components/Contact';
-import Footer from '../components/Footer';
-import Hero from '../components/Hero';
-import Navbar from '../components/Navbar';
-import Project from '../components/Project';
-import Recommendation from '../components/Recommendation';
-import Skillset from '../components/Skillset';
+import React from "react";
+import Home from "../components/HomePage/Index";
+type Props = {
+  recordMap: any;
+};
+import { NotionAPI } from "notion-client";
+import { NotionRenderer } from "react-notion-x";
 
-type Props = {}
-
-const Home = (props: Props) => {
+const Index = ({ recordMap }: Props) => {
   return (
-    <Container w="1640px" maxWidth={"100%"}>
-      <Navbar />
-      <Hero />
-      <About />
-      <Project />
-      <Skillset />
-      <Career />
-      {/* <Recommendation /> */}
-      <Contact />
-      <Footer/>
-    </Container>
+    <NotionRenderer recordMap={recordMap} fullPage={true} darkMode={true} />
   );
+};
+
+export async function getServerSideProps() {
+  const notion = new NotionAPI();
+
+  const recordMap = await notion.getPage("b29098a2e49048e781ae0b2f3c92bb75");
+  return {
+    props: {
+      recordMap,
+    }, // will be passed to the page component as props
+  };
 }
 
-export default Home
+export default Index;
