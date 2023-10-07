@@ -1,5 +1,5 @@
 import "../theme/notion-react-x.css"
-import "prismjs/themes/prism-tomorrow.css";
+import "../theme/prismjs/prism-coy.css";
 import "katex/dist/katex.min.css";
 
 import "../styles/globals.css";
