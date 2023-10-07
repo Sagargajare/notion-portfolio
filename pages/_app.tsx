@@ -1,4 +1,4 @@
-import "react-notion-x/src/styles.css";
+import "../theme/notion-react-x.css"
 import "prismjs/themes/prism-tomorrow.css";
 import "katex/dist/katex.min.css";
 
