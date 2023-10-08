@@ -1,14 +1,24 @@
 import React from "react";
+import dynamic from "next/dynamic";
+import { NotionAPI } from "notion-client";
+import { NotionRenderer } from "react-notion-x";
+
+const DotRing = dynamic(
+  () => import("../src/components/customCursor/DotRing"),
+  { ssr: false }
+);
 
 type Props = {
   recordMap: any;
 };
-import { NotionAPI } from "notion-client";
-import { NotionRenderer } from "react-notion-x";
+
 
 const Index = ({ recordMap }: Props) => {
   return (
-    <NotionRenderer recordMap={recordMap} fullPage={true} darkMode={true} />
+    <>
+      <DotRing />
+      <NotionRenderer recordMap={recordMap} fullPage={true} darkMode={true} />
+    </>
   );
 };
 
