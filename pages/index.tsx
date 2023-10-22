@@ -2,22 +2,28 @@ import React from "react";
 import dynamic from "next/dynamic";
 import { NotionAPI } from "notion-client";
 import { NotionRenderer } from "react-notion-x";
-
-const DotRing = dynamic(
-  () => import("../src/components/customCursor/DotRing"),
-  { ssr: false }
+const Collection = dynamic(() =>
+  import("react-notion-x/build/third-party/collection").then(
+    (m) => m.Collection
+  )
 );
+
 
 type Props = {
   recordMap: any;
 };
 
-
 const Index = ({ recordMap }: Props) => {
   return (
     <>
-      <DotRing />
-      <NotionRenderer recordMap={recordMap} fullPage={true} darkMode={true} />
+      <NotionRenderer
+        recordMap={recordMap}
+        fullPage={true}
+        darkMode={true}
+        components={{
+          Collection,
+        }}
+      />
     </>
   );
 };
