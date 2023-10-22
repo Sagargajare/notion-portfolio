@@ -19,7 +19,6 @@ const Index = ({ recordMap }: Props) => {
       <NotionRenderer
         recordMap={recordMap}
         fullPage={true}
-        darkMode={true}
         components={{
           Collection,
         }}

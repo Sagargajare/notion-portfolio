@@ -12,7 +12,7 @@
   --fg-color-6: rgba(55, 53, 47, 0.8);
   --fg-color-icon: var(--fg-color);
 
-  --bg-color: #fff;
+  --bg-color: #F8F5F1;
   --bg-color-0: rgba(135, 131, 120, 0.15);
   --bg-color-1: rgb(247, 246, 243);
   --bg-color-2: rgba(135, 131, 120, 0.15);
@@ -62,7 +62,7 @@
   --notion-item-purple: rgba(103, 36, 222, 0.2);
   --notion-item-gray: rgba(155, 154, 151, 0.4);
 
-  --notion-max-width: 720px;
+  --notion-max-width: 1280px;
   --notion-header-height: 45px;
 }
 
@@ -427,8 +427,10 @@
 }
 
 .notion-h1 {
-  font-size: 1.875em;
-  margin-top: 1.08em;
+  font-size: 4rem;
+  line-height: 5.37rem;
+  font-weight: 700;
+  color: #282825;
 }
 
 .notion-header-anchor {
@@ -823,6 +825,10 @@ svg.notion-page-icon {
 }
 
 .notion-text {
+  font-family: 'Cabin', sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  color:#52514e;
   width: 100%;
   white-space: pre-wrap;
   word-break: break-word;
