@@ -1149,12 +1149,7 @@ svg.notion-page-icon {
 }
 
 .notion-collection-header {
-  display: flex;
-  align-items: center;
-  height: 42px;
-  padding: 4px 2px;
-  white-space: nowrap;
-  overflow: hidden;
+  display: none;
 }
 
 .notion-collection-header-title {
@@ -1463,14 +1458,10 @@ svg.notion-page-icon {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-
   text-decoration: none;
   box-shadow: rgba(15, 15, 15, 0.1) 0 0 0 1px, rgba(15, 15, 15, 0.1) 0 2px 4px;
-  border-radius: 3px;
   background: var(--bg-color);
   color: var(--fg-color);
-  transition: background 100ms ease-out 0s;
-
   user-select: none;
   cursor: pointer;
 }

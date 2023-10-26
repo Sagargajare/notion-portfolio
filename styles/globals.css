@@ -62,7 +62,6 @@ body {
   align-items: center;
   transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1),
     box-shadow 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-  display: flex;
   position: relative;
   box-shadow: 3px 3px #282825;
 }
