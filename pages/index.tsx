@@ -2,25 +2,41 @@ import React from "react";
 import dynamic from "next/dynamic";
 import { NotionAPI } from "notion-client";
 import { NotionRenderer } from "react-notion-x";
+import Navbar from "../components/Navbar";
+import { PageBlock } from "notion-types";
+import { getPageTableOfContents } from "notion-utils";
 const Collection = dynamic(() =>
   import("react-notion-x/build/third-party/collection").then(
     (m) => m.Collection
   )
 );
 
+const Modal = dynamic(
+  () => import('react-notion-x/build/third-party/modal').then((m) => m.Modal),
+  {
+    ssr: false
+  }
+)
 
 type Props = {
   recordMap: any;
 };
 
 const Index = ({ recordMap }: Props) => {
+  const keys = Object.keys(recordMap?.block || {});
+  const block = recordMap?.block?.[keys[0]]?.value;
+  const tableOfContain = getPageTableOfContents(block as PageBlock, recordMap);
   return (
     <>
+      <Navbar
+        navItems={[...tableOfContain.filter((dt) => dt.indentLevel === 0)]}
+      />
       <NotionRenderer
         recordMap={recordMap}
         fullPage={true}
         components={{
           Collection,
+          Modal
         }}
       />
     </>

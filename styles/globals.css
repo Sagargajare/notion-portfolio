@@ -42,9 +42,9 @@ body {
   display: none;
 }
 
-.notion-gallery-grid-size-large {
-  grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
-}
+/* .notion-gallery-grid-size-large {
+  grid-template-columns: repeat(auto-fill, minmax(100%, 3fr));
+} */
 
 .notion-gallery-grid {
   border-top: none;
@@ -54,60 +54,75 @@ body {
   display: none;
 }
 
-.notion-collection-card{
-  flex-direction: row;
+.notion-collection-card {
   background-color: #fff;
   border: 1px solid #282825;
   border-radius: 20px;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  transition: transform .25s cubic-bezier(.645,.045,.355,1),box-shadow .25s cubic-bezier(.645,.045,.355,1);
+  transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1),
+    box-shadow 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   display: flex;
   position: relative;
   box-shadow: 3px 3px #282825;
 }
 
-.notion-collection-card-cover{
-  width: 50%;
-  height: 100%;
+.notion-collection-card:hover{
+  background: inherit;
+  transform: translate(-4px,-4px);
+  box-shadow: 6px 6px #282825;
+}
+
+.notion-collection-card-cover {
+  width: 100%;
   border-bottom: none;
 }
 
 .notion-collection-card-cover img {
-  width: 100%;
-  height: 100%;
   object-fit: cover !important;
-  object-position: center 50% !important;
+  object-position: top !important;
 }
 
-.notion-collection-card-body{
-  width: 50%;
+@media (max-width: 768px) {
+  .notion-collection-card-cover img {
+    object-fit: fill !important;
+    object-position: center 50% !important;
+  }
+  .notion-collection-card-cover{
+    width: 100%;
+  }
+  .notion-collection-card {
+    flex-direction: column;
+  }
+  .notion-collection-card-body {
+    width: 100%;
+  }
 }
 
-.notion-property-multi_select > .notion-property-multi_select-item{
+.notion-property-multi_select > .notion-property-multi_select-item {
   border: 1px solid #282825;
   height: 35px;
   border-radius: 100px;
   margin-right: 8px;
   padding: 8px 16px;
-  font-family: "Cabin",Arial,sans-serif;
+  font-family: "Cabin", Arial, sans-serif;
   font-size: 16px;
   font-weight: 500;
   box-shadow: 3px 3px #282825;
 }
 
-.notion-collection-card .notion-page-title-text{
+.notion-collection-card .notion-page-title-text {
   text-transform: none;
   margin-top: 0;
   margin-bottom: 12px;
-  font-family: "Cabin",Arial,sans-serif;
+  font-family: "Cabin", Arial, sans-serif;
   font-size: 28px;
   font-weight: 600;
   line-height: 140%;
 }
 
-.notion-collection-card .notion-property-text{
-  font-family: 'Cabin', sans-serif;
+.notion-collection-card .notion-property-text {
+  font-family: "Cabin", sans-serif;
   font-weight: 400;
   font-size: 1.25rem;
   color: #52514e;
@@ -117,3 +132,6 @@ body {
   padding: 3px 2px;
   margin: 1px 0;
 }
+
+/* Navbar */
+@import "Navbar.css";
