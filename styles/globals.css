@@ -134,3 +134,6 @@ body {
 
 /* Navbar */
 @import "Navbar.css";
+
+/* Badge */
+@import "Badge.css";

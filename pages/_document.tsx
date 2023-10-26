@@ -1,5 +1,6 @@
 import NextDocument, { Html, Head, Main, NextScript } from "next/document";
 import React from "react";
+import Badge from "../components/Badge";
 
 type Props = {};
 
@@ -16,6 +17,7 @@ class Document extends NextDocument<Props> {
           ></link>
         </Head>
         <body>
+          <Badge/>
           <Main />
           <NextScript />
         </body>

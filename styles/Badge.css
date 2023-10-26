@@ -1,0 +1,35 @@
+.badge {
+  direction: ltr;
+  text-decoration: none;
+  opacity: 0.8;
+  position: fixed;
+  z-index: 10;
+  bottom: 22px;
+  left: 36px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  background-color: #f7cb45;
+  border-radius: 70px;
+  box-shadow: 3px 3px #282825;
+  border: 1px solid #282825;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.badge:hover {
+  opacity: 1;
+}
+
+.badge span {
+  margin-left: 6px;
+  text-align: left;
+  letter-spacing: -0.4px;
+  line-height: 1;
+  font-family: "Vollkorn", Arial, sans-serif;
+  font-size: 14px;
+  color: #282825;
+}
