@@ -33,6 +33,7 @@ const Index = ({ recordMap }: Props) => {
       />
       <NotionRenderer
         recordMap={recordMap}
+        disableHeader
         fullPage={true}
         components={{
           Collection,

@@ -8,7 +8,7 @@
   color: #fff;
   padding: 15px 0;
   z-index: 1000;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(4px);
   opacity: 1 !important;
   background: rgba(249, 245, 242, 0.5);
 }
