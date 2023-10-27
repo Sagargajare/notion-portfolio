@@ -5,6 +5,7 @@ import { NotionRenderer } from "react-notion-x";
 import Navbar from "../components/Navbar";
 import { PageBlock } from "notion-types";
 import { getPageTableOfContents } from "notion-utils";
+import PageHead from "../components/PagrHead";
 const Collection = dynamic(() =>
   import("react-notion-x/build/third-party/collection").then(
     (m) => m.Collection
@@ -12,11 +13,11 @@ const Collection = dynamic(() =>
 );
 
 const Modal = dynamic(
-  () => import('react-notion-x/build/third-party/modal').then((m) => m.Modal),
+  () => import("react-notion-x/build/third-party/modal").then((m) => m.Modal),
   {
-    ssr: false
+    ssr: false,
   }
-)
+);
 
 type Props = {
   recordMap: any;
@@ -28,6 +29,7 @@ const Index = ({ recordMap }: Props) => {
   const tableOfContain = getPageTableOfContents(block as PageBlock, recordMap);
   return (
     <>
+      <PageHead />
       <Navbar
         navItems={[...tableOfContain.filter((dt) => dt.indentLevel === 0)]}
       />
@@ -37,7 +39,7 @@ const Index = ({ recordMap }: Props) => {
         fullPage={true}
         components={{
           Collection,
-          Modal
+          Modal,
         }}
       />
     </>

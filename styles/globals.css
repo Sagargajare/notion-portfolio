@@ -66,9 +66,9 @@ body {
   box-shadow: 3px 3px #282825;
 }
 
-.notion-collection-card:hover{
+.notion-collection-card:hover {
   background: inherit;
-  transform: translate(-4px,-4px);
+  transform: translate(-4px, -4px);
   box-shadow: 6px 6px #282825;
 }
 
@@ -87,7 +87,7 @@ body {
     object-fit: fill !important;
     object-position: center 50% !important;
   }
-  .notion-collection-card-cover{
+  .notion-collection-card-cover {
     width: 100%;
   }
   .notion-collection-card {
@@ -130,6 +130,10 @@ body {
   word-break: break-word;
   padding: 3px 2px;
   margin: 1px 0;
+}
+
+.notion-asset-caption {
+  display: none;
 }
 
 /* Navbar */
