@@ -136,6 +136,10 @@ body {
   display: none;
 }
 
+.notion-column{
+  justify-content: center;
+}
+
 /* Navbar */
 @import "Navbar.css";
 

@@ -1459,7 +1459,7 @@ svg.notion-page-icon {
   flex-direction: column;
   overflow: hidden;
   text-decoration: none;
-  box-shadow: rgba(15, 15, 15, 0.1) 0 0 0 1px, rgba(15, 15, 15, 0.1) 0 2px 4px;
+  /* box-shadow: rgba(15, 15, 15, 0.1) 0 0 0 1px, rgba(15, 15, 15, 0.1) 0 2px 4px; */
   background: var(--bg-color);
   color: var(--fg-color);
   user-select: none;
