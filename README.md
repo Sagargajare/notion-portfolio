@@ -1,34 +1,93 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Notion Portfolio
+### Get your own portfolio using this template
+1. Duplicate the Notion Template:
+  
+     Start by duplicating the Notion template provided here. This template is where you will organize and design the content for your portfolio.
 
-## Getting Started
+2. Deploy to Vercel:
 
-First, run the development server:
+     Deploy your Notion portfolio to Vercel with a single click using the button below:
 
-```bash
-npm run dev
-# or
-yarn dev
+    [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FSagargajare%2Fnotion-portfolio&env=NOTION_PAGE_ID&envDescription=Provide%20Notion%20public%20page%20id&project-name=notionized-portfolio&repository-name=notionized-portfolio&demo-title=Notionized%20Portfolio%20by%20Saga&demo-description=Notionized%20portfolio%20built%20using%20Nextjs%20and%20Notion&demo-url=http%3A%2F%2Fsagargajare.in%2F)
+
+    This will take you to Vercel's interface, where you can customize your deployment settings, including your project name and environment variables. You'll need to provide your Notion public page ID as an environment variable for your portfolio to be linked to your Notion template.
+
+3. Leave a Star:
+If you find this project helpful and appreciate the effort put into creating it, please consider leaving a star on the [GitHub repository](https://github.com/Sagargajare/notion-portfolio). Your support and feedback are valuable in improving this template for others.
+
+## Local Setup
+
+This guide will walk you through the process of setting up a Notion Portfolio project locally. Follow these steps to get your development environment up and running.
+
+## Clone the Repository
+
+Start by cloning the project repository from GitHub. Open your terminal and run the following command:
+
+```shell
+git clone https://github.com/Sagargajare/notion-portfolio
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This will create a local copy of the project on your machine.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Install Dependencies
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Change your current directory to the project folder:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```shell
+cd notion-portfolio
+```
 
-## Learn More
+Then, use `yarn` to install the project dependencies:
 
-To learn more about Next.js, take a look at the following resources:
+```shell
+yarn install
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This command will download and install all the required packages and dependencies.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Configure Environment Variables
 
-## Deploy on Vercel
+In the root directory of the project, you'll find a `.env.example` file. Duplicate this file and rename it to `.env`. Open the newly created `.env` file in a text editor.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Obtain Notion Page ID
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+To configure the Notion integration, you need to obtain your Notion Page ID. Here's how to do it:
+
+1. Duplicate the Notion template from the following URL to your Notion workspace:
+   [Notion Template](https://saga-web3.notion.site/gm-b29098a2e49048e781ae0b2f3c92bb75)
+
+2. Publish the Notion page by clicking "Share" in the top right corner of your Notion page. Make sure it's publicly accessible.
+
+3. After publishing, you will have a public URL like `https://www.notion.so/Your-Page-Title-1234567890abcdef`. The string of numbers and letters at the end is your Notion Page ID.
+
+### Update Environment Variable
+
+In your `.env` file, add the following line and replace `YOUR_NOTION_PAGE_ID` with the Notion Page ID obtained from the previous step:
+
+```shell
+NOTION_PAGE_ID=YOUR_NOTION_PAGE_ID
+```
+
+Save the `.env` file.
+
+## Run the Development Server
+
+With all the configurations in place, you can now start the development server:
+
+```shell
+yarn run dev
+```
+
+This command will build and run the project locally. You can access the development version of your Next.js application by opening your web browser and navigating to [http://localhost:3000](http://localhost:3000).
+
+You are now set up and ready to start working on your Portfolio project! Enjoy your development journey.
+
+# Connect
+
+Feel free to connect with me on the following platforms:
+
+[![Twitter](https://img.shields.io/badge/Twitter-%40SagarGajare20-blue.svg?style=for-the-badge&logo=twitter)](https://twitter.com/SagarGajare20)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Sagar%20Gajare-blue.svg?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/sagar-gajare/)
+
+
+I look forward to connecting with you!
