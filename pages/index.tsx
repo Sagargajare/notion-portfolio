@@ -49,7 +49,7 @@ const Index = ({ recordMap }: Props) => {
 export async function getServerSideProps() {
   const notion = new NotionAPI();
 
-  const recordMap = await notion.getPage("b29098a2e49048e781ae0b2f3c92bb75");
+  const recordMap = await notion.getPage(`${process.env.NOTION_PAGE_ID}`);
   return {
     props: {
       recordMap,
