@@ -30,7 +30,7 @@ const Home = ({ recordMap }: { recordMap: ExtendedRecordMap }) => {
 export default Home;
 
 export async function getServerSideProps() {
-  const rootPageId = "b29098a2e49048e781ae0b2f3c92bb75";
+  const rootPageId = `${process.env.NOTION_PAGE_ID}`;
   const recordMap = await getRecordDataForPage(rootPageId);
 
   return {
